@@ -27,4 +27,4 @@ RUN ls -l target/
 EXPOSE 9090
 
 # Run the JAR file
-ENTRYPOINT ["java", "-jar", "target/*.jar"]
+ENTRYPOINT ["java", "-jar", "target/task_management_backend-0.0.1-SNAPSHOT.jar"]
