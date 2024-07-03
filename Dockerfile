@@ -20,6 +20,9 @@ COPY src ./src
 # Package the application
 RUN ./mvnw clean package -DskipTests
 
+# Print the contents of the target directory to debug
+RUN ls -l target/
+
 # Make port 9090 available to the world outside this container
 EXPOSE 9090
 
