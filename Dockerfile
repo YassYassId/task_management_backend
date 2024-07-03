@@ -8,6 +8,9 @@ WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
+# Ensure the Maven wrapper has execute permissions
+RUN chmod +x mvnw
+
 # Install dependencies (this will create a layer in the Docker image)
 RUN ./mvnw dependency:go-offline
 
@@ -17,7 +20,7 @@ COPY src ./src
 # Package the application
 RUN ./mvnw clean package -DskipTests
 
-# Make port 8080 available to the world outside this container
+# Make port 9090 available to the world outside this container
 EXPOSE 9090
 
 # Run the JAR file
