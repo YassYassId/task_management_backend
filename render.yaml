@@ -7,12 +7,16 @@ services:
     startCommand: java -jar target/task_management_backend-0.0.1-SNAPSHOT.jar
     runtime: docker
     envVars:
-      - key: DATABASE_URL
-        value: postgresql://yassine_admin:P0UReoUimbFQGYDJ6qtVsTfxAYiFuILV@dpg-cq2jda56l47c73b77860-a/task_management_q8tc
+      - key: DATABASE_HOST
+        value: dpg-cq2jda56l47c73b77860-a
+      - key: DATABASE_PORT
+        value: 5432
+      - key: DATABASE_NAME
+        value: task_management_q8tc
       - key: DATABASE_USERNAME
         value: yassine_admin
       - key: DATABASE_PASSWORD
-        value: P0UReoUimbFQGYDJ6qtVsTfxAYiFulLV
+        value: P0UReoUimbFQGYDJ6qtVsTfxAYiFuILV
       - key: JWT_SECRET_KEY
         sync: false
         value: 24388c10c149c459bf1c144e99308506e0e13951b0711858ab7a6a005138865d
