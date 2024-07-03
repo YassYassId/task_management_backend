@@ -17,6 +17,14 @@ RUN ./mvnw dependency:go-offline
 # Copy the source code into the container
 COPY src ./src
 
+# Print environment variables for debugging
+RUN echo "DATABASE_HOST=$DATABASE_HOST"
+RUN echo "DATABASE_PORT=$DATABASE_PORT"
+RUN echo "DATABASE_NAME=$DATABASE_NAME"
+RUN echo "DATABASE_USERNAME=$DATABASE_USERNAME"
+RUN echo "DATABASE_PASSWORD=$DATABASE_PASSWORD"
+RUN echo "JWT_SECRET_KEY=$JWT_SECRET_KEY"
+
 # Package the application
 RUN ./mvnw clean package -DskipTests
 
