@@ -1,9 +1,10 @@
 services:
   - type: web
     name: TaskManagementAPI
-    dockerfilePath: Dockerfile
+    env: docker
+    dockerfilePath: ./task_management_backend/Dockerfile
     buildCommand: ./mvnw clean install
-    startCommand: java -jar task_management_backend/target/*.jar
+    startCommand: java -jar target/task_management_backend-0.0.1-SNAPSHOT.jar
     runtime: docker
     envVars:
       - key: DATABASE_URL
