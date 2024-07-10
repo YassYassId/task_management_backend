@@ -50,7 +50,7 @@ public class AppConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000","https://6685c5bf48bdb3052f40724d--lambent-swan-46201c.netlify.app"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000","https://6685c5bf48bdb3052f40724d--lambent-swan-46201c.netlify.app","https://neon-swan-bde043.netlify.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
